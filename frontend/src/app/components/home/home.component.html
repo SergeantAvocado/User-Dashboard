@@ -1,0 +1,42 @@
+<div class="jumbotron">
+    <div class="text-center"><img class="img-fluid" alt="Responsive image" src="../../../assets/person-24px.svg" width="150px" height="150px"></div>
+    <h1 class="display-4 text-center">Welcome to the User CRUD Application!</h1>
+    <hr>
+    <p class="lead text-center">This is a simple crud application made with angular, nodeJS/expressJS and postgreSQL.</p>
+    <hr class="my-4">
+    <h4 class="h4">About</h4>
+    <p>This is an example "SPA" in which you connect to a porgreSQL database to perform the following operations:</p>
+    <ul>
+        <li>Create Users and add them to a database</li>
+        <li>Read user data</li>
+        <li>Update user data</li>
+        <li>Delete users from database</li>
+    </ul>
+    <hr>
+    <h4 class="h4">Instructions</h4>
+    <p>To use the application, create a database and implement the users table code in the backend/database/database.sql file.
+        Then configure the config object to open a connection pool to your local database, this file can be found in backend/database/db.config.js
+    </p>
+    <hr>
+    <h4 class="h4">Technologies:</h4>
+    <div class="text-center">
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item">
+                <img class="img-fluid" alt="Responsive image" src="../../../assets/angular_logo.png" width="100px" height="100px">
+            </li>
+            <li class="list-group-item">
+                <img class="img-fluid" alt="Responsive image" src="../../../assets/node_logo.png" width="200px" height="100px">
+            </li>
+            <li class="list-group-item">
+                <img class="img-fluid" alt="Responsive image" src="../../../assets/express_logo.png" width="250px" height="100px">
+            </li>
+            <li class="list-group-item">
+                <img class="img-fluid" alt="Responsive image" src="../../../assets/postgre_logo.webp" width="100px" height="100px">
+            </li>
+        </ul>
+    </div>
+    <hr>
+    <h4 class="h4 text-center">Click on the following button to start adding users to your database!</h4>
+    <hr>
+    <a class="btn btn-primary btn-lg btn-block" routerLink="/users/create" role="button">add users</a>
+</div>

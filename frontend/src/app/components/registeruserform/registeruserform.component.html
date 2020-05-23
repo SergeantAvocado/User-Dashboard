@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="jumbotron">
+        <h3 class="h3 text-center">User register form</h3>
+        <hr>
+        <form #user_form="ngForm" (ngSubmit)="createUser(user_form)">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" placeholder="Name here" name='first_name' #first_name="ngModel"[(ngModel)]='user.first_name'>
+            </div>
+            <div class="form-group">
+                <label for="name">Last name</label>
+                <input type="text" class="form-control" placeholder="Last name here" name='last_name' #last_name="ngModel" [(ngModel)]='user.last_name'>
+              </div>
+              <div class="form-group">
+                <label for="name">Username</label>
+                <input type="text" class="form-control" placeholder="Username here" name='username' #username="ngModel" [(ngModel)]="user.username">
+              </div>
+            <hr>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            <hr>
+            <button class="btn btn-danger btn-block" (click)="CleanForm(user_form)">Clean form</button>
+          </form>
+    </div>
+</div>

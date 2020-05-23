@@ -1,0 +1,38 @@
+<h1 class="h1 text-center">Users</h1>
+<hr>
+<div class="container">
+    <table class="table table-striped">
+        <thead class="table-dark bg-primary">
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">#Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Lastname</th>
+            <th scope="col">Username</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <th scope="row"><img src="../../../assets/person-24px.svg" width="45px" height="45px"></th>
+            <th scope="row">{{user.id}}</th>
+            <td>{{user.first_name}}</td>
+            <td>{{user.last_name}}</td>
+            <td>@{{user.username}}</td>
+
+            <!--action buttons-->
+            <td>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-primary" [routerLink]="['/users',user.id]">
+                        <img src="../../../assets/edit.svg">
+                    </button>
+                    <button type="button" class="btn btn-outline btn-light" disabled></button>
+                    <button type="button" class="btn btn-danger" (click)="deleteUser(user)">
+                        <img src="../../../assets/trash-2 (1).svg">
+                    </button>
+                  </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
